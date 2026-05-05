@@ -44,11 +44,11 @@ async def start(m: UpdateNewMessage):
 𝐏𝐋𝐀𝐍'𝐒 : /plans"""
 
     # Check if the user is a member of both channels
-    channel1 = "@mavimods2"
-    channel2 = "@mavibot_support"  # Replace with the actual username of your second channel
+    channel1 = "@logs_akbot"
+    channel2 = "@log_ak_bot"  # Replace with the actual username of your second channel
 
     if not await is_user_on_chat(bot, channel1, m.peer_id) or not await is_user_on_chat(bot, channel2, m.peer_id):
-        return await m.reply("𝐏𝐥𝐞𝐚𝐬𝐞 𝐣𝐨𝐢𝐧 @mavimods2 𝐚𝐧𝐝 @mavibot_support 𝐛𝐞𝐟𝐨𝐫𝐞 𝐮𝐬𝐢𝐧𝐠 𝐭𝐡𝐞 𝐛𝐨𝐭.")
+        return await m.reply("𝐏𝐥𝐞𝐚𝐬𝐞 𝐣𝐨𝐢𝐧 @mavimods2 𝐚𝐧𝐝 @log_ak_bot 𝐛𝐞𝐟𝐨𝐫𝐞 𝐮𝐬𝐢𝐧𝐠 𝐭𝐡𝐞 𝐛𝐨𝐭.")
 
     await m.reply(reply_text, link_preview=False, parse_mode="markdown")
 
@@ -58,15 +58,15 @@ async def start(m: UpdateNewMessage):
     fileid = db.get(str(text))
 
     # Define the channels
-    channel1 = "@mavimods2"
-    channel2 = "@mavibot_support"
+    channel1 = "@logs_akbot"
+    channel2 = "@log_ak_bot"
 
     # Check if the user is a member of both channels
     check_channel1 = await is_user_on_chat(bot, channel1, m.peer_id)
     check_channel2 = await is_user_on_chat(bot, channel2, m.peer_id)
 
     if not check_channel1 or not check_channel2:
-        return await m.reply("𝐏𝐥𝐞𝐚𝐬𝐞 𝐣𝐨𝐢𝐧 @mavimods2 𝐚𝐧𝐝 @mavibot_support 𝐛𝐞𝐟𝐨𝐫𝐞 𝐮𝐬𝐢𝐧𝐠 𝐭𝐡𝐞 𝐛𝐨𝐭.")
+        return await m.reply("𝐏𝐥𝐞𝐚𝐬𝐞 𝐣𝐨𝐢𝐧 @mavimods2 𝐚𝐧𝐝 @log_ak_bot 𝐛𝐞𝐟𝐨𝐫𝐞 𝐮𝐬𝐢𝐧𝐠 𝐭𝐡𝐞 𝐛𝐨𝐭.")
 
     await bot(
         ForwardMessagesRequest(
@@ -138,8 +138,8 @@ async def get_message(m: Message):
 
 async def handle_message(m: Message):
     # Define the channels
-    channel1 = "@mavimods2"
-    channel2 = "@mavibot_support" # Replace with your second channel
+    channel1 = "@logs_akbot"
+    channel2 = "@log_ak_bot" # Replace with your second channel
 
     # Check if the user is a member of both channels
     check_channel1 = await is_user_on_chat(bot, channel1, m.peer_id)
@@ -261,7 +261,7 @@ File Name: `{data['file_name']}`
 Size: **{data["size"]}** 
 Direct Link: [Click Here](https://t.me/MaviTerabox_bot?start={uuid})
 
-@mavimods2
+@log_ak_bot
 """,
             supports_streaming=True,
             spoiler=True,
@@ -283,7 +283,7 @@ Direct Link: [Click Here](https://t.me/MaviTerabox_bot?start={uuid})
             caption=f"""
 File Name: `{data['file_name']}`
 Size: **{data["size"]}** 
-Direct Link: [Click Here](https://t.me/MaviTerabox_bot?start={uuid})
+Direct Link: [Click Here](https://t.me/image_to_link_ak_bot?start={uuid})
 
 @mavimods2
 """,
